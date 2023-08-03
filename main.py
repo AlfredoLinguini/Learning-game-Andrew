@@ -1,12 +1,29 @@
 import tkinter as tk
 
+def mathgame():
+    power.destroy()
+    button.destroy()
+    butt.destroy()
+    import math
+    math
+
+def spellinggame():
+    import spelling
+    spelling
+
 window = tk.Tk()
-window.title("Hello world")
+window.title("Apex Fighters")
 window.geometry("300x300")
 
-hello = tk.Label(text="Hello world!")
-hello.pack()
-button = tk.Button(text="Click me!")
+power = tk.Label(text="Welcome to the Game.\n Select the game you want.")
+power.pack()
+
+button = tk.Button(text="Math game",
+                  command=mathgame)
 button.pack()
+
+butt = tk.Button(text="Spelling game",
+                  command=spellinggame)
+butt.pack()
 
 tk.mainloop()
