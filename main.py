@@ -1,15 +1,21 @@
 import tkinter as tk
 
+
 def mathgame():
     power.destroy()
     button.destroy()
     butt.destroy()
-    import math
-    math
+    import numbers
+    numbers
 
 def spellinggame():
-    import spelling
-    spelling
+    power.destroy()
+    button.destroy()
+    butt.destroy()
+    import spellingtest
+    spellingtest
+
+
 
 window = tk.Tk()
 window.title("Apex Fighters")
