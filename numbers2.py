@@ -1,19 +1,6 @@
 import tkinter as tk
 import random
 
-def back():
-    butto.destroy()
-    pow.destroy()
-    import main
-    main
-
-pow = tk.Label(text="This is math.")
-pow.pack()
-
-butto = tk.Button(text="Back Button",
-                  command=back)
-butto.pack()
-
 class MathGameApp:
     def __init__(self, root):
         self.root = root
@@ -45,8 +32,8 @@ class MathGameApp:
 
 
     def generate_question(self):
-        num1 = random.randint(1, 20)
-        num2 = random.randint(1, 20)
+        num1 = random.randint(21, 50)
+        num2 = random.randint(21, 50)
 
 
         if random.choice([True, False]):

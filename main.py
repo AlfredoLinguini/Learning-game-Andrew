@@ -1,20 +1,18 @@
 import tkinter as tk
 
-
 def mathgame():
     power.destroy()
     button.destroy()
     butt.destroy()
-    import numbers
-    numbers
+    import difficult
+    difficult
 
 def spellinggame():
     power.destroy()
     button.destroy()
     butt.destroy()
-    import spellingtest
-    spellingtest
-
+    import spelling
+    spelling
 
 
 window = tk.Tk()
