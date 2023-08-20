@@ -4,15 +4,15 @@ def mathgame():
     power.destroy()
     button.destroy()
     butt.destroy()
-    import difficult
-    difficult
+    import difficultmath
+    difficultmath
 
 def spellinggame():
     power.destroy()
     button.destroy()
     butt.destroy()
-    import spelling
-    spelling
+    import difficultspelling
+    difficultspelling
 
 
 window = tk.Tk()

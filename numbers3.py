@@ -33,8 +33,8 @@ class MathGameApp:
 
 
     def generate_question(self):
-        num1 = random.randint(10, 30)
-        num2 = random.randint(10, 30)
+        num1 = random.randint(20, 35)
+        num2 = random.randint(5, 19)
 
 
         if random.choice([True, False]):
