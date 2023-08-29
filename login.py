@@ -1,5 +1,5 @@
 import tkinter as tk
-import main
+import os
 
 def save_username(username):
     with open("usernames.txt", "a") as file:
@@ -7,7 +7,7 @@ def save_username(username):
 
 def login(username):
     root.destroy()
-    main.run()
+    os.system("python main.py")
 
 def login_button_clicked():
     username = entry.get()
