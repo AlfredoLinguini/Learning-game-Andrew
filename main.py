@@ -36,14 +36,14 @@ class GameApp:
         pow = tk.Label(self.current_frame, text="Choose a difficulty.")
         pow.pack()
 
-        difficulty1 = tk.Button(self.current_frame, text="Level 1", command=self.level1math)
-        difficulty1.pack()
+        difficulty1math = tk.Button(self.current_frame, text="Level 1", command=self.level1math)
+        difficulty1math.pack()
 
-        difficulty2 = tk.Button(self.current_frame, text="Level 2", command=self.level2math)
-        difficulty2.pack()
+        difficulty2math = tk.Button(self.current_frame, text="Level 2", command=self.level2math)
+        difficulty2math.pack()
 
-        difficulty3 = tk.Button(self.current_frame, text="Level 3", command=self.level3math)
-        difficulty3.pack()
+        difficulty3math = tk.Button(self.current_frame, text="Level 3", command=self.level3math)
+        difficulty3math.pack()
 
         back_button = tk.Button(self.current_frame, text="Back", command=self.show_main_menu)
         back_button.pack()
@@ -58,14 +58,14 @@ class GameApp:
         pow = tk.Label(self.current_frame, text="Choose a difficulty.")
         pow.pack()
 
-        difficulty1 = tk.Button(self.current_frame, text="Level 1", command=self.level1spelling)
-        difficulty1.pack()
+        difficulty1spelling = tk.Button(self.current_frame, text="Level 1", command=self.level1spelling)
+        difficulty1spelling.pack()
 
-        difficulty2 = tk.Button(self.current_frame, text="Level 2", command=self.level2spelling)
-        difficulty2.pack()
+        difficulty2spelling = tk.Button(self.current_frame, text="Level 2", command=self.level2spelling)
+        difficulty2spelling.pack()
 
-        difficulty3 = tk.Button(self.current_frame, text="Level 3", command=self.level3spelling)
-        difficulty3.pack()
+        difficulty3spelling = tk.Button(self.current_frame, text="Level 3", command=self.level3spelling)
+        difficulty3spelling.pack()
 
         back_button = tk.Button(self.current_frame, text="Back", command=self.show_main_menu)
         back_button.pack()

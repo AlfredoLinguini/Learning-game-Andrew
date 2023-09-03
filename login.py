@@ -7,16 +7,18 @@ def save_username(username):
 
 def login(username):
     root.destroy()
-    os.system("python main.py")
+    if check_username(username):
+        print(f"Welcome back, {username}!")
+        os.system("python main.py")
+    else:
+        save_username(username)
+        print(f"Hello, {username}! You are a new user.")
+        os.system("python main.py")
 
 def login_button_clicked():
     username = entry.get()
     if username:
-        if check_username(username):
-            login(username)
-        else:
-            save_username(username)
-            login(username)
+        login(username)
 
 def check_username(username):
     with open("usernames.txt", "r") as file:
