@@ -7,13 +7,8 @@ def save_username(username):
 
 def login(username):
     root.destroy()
-    if check_username(username):
-        print(f"Welcome back, {username}!")
-        os.system("python main.py")
-    else:
-        save_username(username)
-        print(f"Hello, {username}! You are a new user.")
-        os.system("python main.py")
+    save_username(username)
+    os.system("python main.py")
 
 def login_button_clicked():
     username = entry.get()
