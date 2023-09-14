@@ -1,11 +1,8 @@
 import tkinter as tk
 import random
 import string
+import time
 
-def run():
-    root = tk.Tk()
-    game = SpellingGame(root)
-    root.mainloop()
 
 class SpellingGame:
     def __init__(self, root):
@@ -65,6 +62,10 @@ class SpellingGame:
             self.label.config(text="Correct!")
             self.score += 1
         else:
-            self.label.config(text="Incorrect. Try again.")
+            self.label.config(text="Incorrect.")
+            root.after(2000, lambda: self.next_word())
 
-run()
+
+root = tk.Tk()
+game = SpellingGame(root)
+root.mainloop()

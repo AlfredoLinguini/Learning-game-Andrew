@@ -1,35 +1,31 @@
 import tkinter as tk
 import random
 import string
-
-def run():
-    root = tk.Tk()
-    game = SpellingGame(root)
-    root.mainloop()
+import time
 
 class SpellingGame:
     def __init__(self, root):
         self.root = root
         self.root.title("Spelling Game")
-        power = tk.Label(text="Un-Jumble the words and more.")
+        power = tk.Label(text="Un-Jumble the words.")
         power.pack()
         
         self.words = {
             "thoaerugftht": "afterthought",
-            "exravaant": "extravagant",
-            "detrrimentl": "detrimental",
-            "domiant": "dominant",
+            "etagtxnvaar": "extravagant",
+            "denlaeirtmt": "detrimental",
+            "dnmtnaoi": "dominant",
             "rnponuceo": "pronounce",
-            "exaperting": "exasperating",
-            "mangeabe": "manageable",
-            "accoutics": "acoustics",
-            "akard": "awkward",
+            "erpeaxtinags": "exasperating",
+            "mgeaebnlaa": "manageable",
+            "acisoscut": "acoustics",
+            "awawrkd": "awkward",
             "trwis": "wrist",
-            "junton": "junction",
+            "juictnon": "junction",
             "neinivotn": "invention",
-            "competiiton": "competition",
+            "cntmpitooei": "competition",
             "nbyouard": "boundary",
-            "croton": "crouton"
+            "crutono": "crouton"
         }
 
         self.current_word = ""
@@ -72,6 +68,10 @@ class SpellingGame:
             self.label.config(text="Correct!")
             self.score += 1
         else:
-            self.label.config(text="Incorrect. Try again.")
+            self.label.config(text="Incorrect.")
+            root.after(2000, lambda: self.next_word())
 
-run()
+
+root = tk.Tk()
+game = SpellingGame(root)
+root.mainloop()
