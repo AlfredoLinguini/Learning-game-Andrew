@@ -4,7 +4,6 @@ import string
 import time
 
 
-
 class SpellingGame:
     def __init__(self, root):
         self.root = root
@@ -61,9 +60,9 @@ class SpellingGame:
             self.score += 1
         else:
             self.label.config(text="Incorrect.")
-            root.after(2000, lambda: self.next_word())
+            self.root.after(2000, lambda: self.next_word())
 
-
-root = tk.Tk()
-game = SpellingGame(root)
-root.mainloop()
+def spellgame1():
+    root = tk.Tk()
+    game = SpellingGame(root)
+    root.mainloop()

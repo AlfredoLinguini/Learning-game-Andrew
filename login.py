@@ -6,6 +6,8 @@ def save_username(username):
         file.write(username + "\n")
 
 def login(username):
+    global current_username
+    current_username = username
     root.destroy()
     save_username(username)
     os.system("python main.py")

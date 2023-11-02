@@ -1,41 +1,32 @@
 import tkinter as tk
 import random
 
-
-class MathGameApp:
+class MathGameApp3:
     def __init__(self, root):
         self.root = root
         self.root.title("Math Game")
         self.root.geometry("400x200")
 
-
         self.score = 0
         self.num_questions = 0
-
 
         self.question_label = tk.Label(root, text="")
         self.question_label.pack(pady=20)
 
-
         self.answer_entry = tk.Entry(root)
         self.answer_entry.pack(pady=10)
-
 
         self.submit_button = tk.Button(root, text="Submit", command=self.check_answer)
         self.submit_button.pack()
 
-
         self.result_label = tk.Label(root, text="")
         self.result_label.pack(pady=10)
  
-
         self.generate_question()
-
 
     def generate_question(self):
         num1 = random.randint(20, 35)
         num2 = random.randint(5, 19)
-
 
         if random.choice([True, False]):
             self.answer = num1 * num2
@@ -46,11 +37,9 @@ class MathGameApp:
             self.answer = num1 / num2
             question_text = f"What is {num1} ÷ {num2}?"
 
-
         self.question_label.config(text=question_text)
         self.answer_entry.delete(0, "end")
         self.result_label.config(text="")
-
 
     def check_answer(self):
         user_answer = self.answer_entry.get()
@@ -64,10 +53,8 @@ class MathGameApp:
         else:
             self.result_label.config(text="Invalid input. Try again.", fg="red")
 
-
         self.num_questions += 1
         self.update_score()
-
 
         if self.num_questions < 10:
             self.generate_question()
@@ -76,14 +63,10 @@ class MathGameApp:
             self.answer_entry.config(state="disabled")
             self.submit_button.config(state="disabled")
 
-
     def update_score(self):
         self.root.title(f"Math Game - Score: {self.score}/{self.num_questions}")
-
  
-def run():
+def runmath3():
     root = tk.Tk()
     app = MathGameApp(root)
     root.mainloop()
-
-run()

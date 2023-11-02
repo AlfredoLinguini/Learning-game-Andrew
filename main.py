@@ -1,5 +1,6 @@
 import tkinter as tk
-
+import os
+from tkinter import *
 class GameApp:
     def __init__(self, root):
         self.root = root
@@ -17,7 +18,7 @@ class GameApp:
         self.current_frame = tk.Frame(self.root)
         self.current_frame.pack()
 
-        power = tk.Label(self.current_frame, text="Welcome to the Game.\nSelect the game you want.")
+        power = tk.Label(self.current_frame, text="Welcome to the Game.\nSelect the game you want to play.")
         power.pack()
 
         button = tk.Button(self.current_frame, text="Math game", command=self.show_math_game)
@@ -70,37 +71,41 @@ class GameApp:
         back_button = tk.Button(self.current_frame, text="Back", command=self.show_main_menu)
         back_button.pack()
 
+    def run_level1math_game(self):
+        math_game_root = tk.Tk()
+        math_app = MathGameApp(math_game_root)
+        math_game_root.mainloop()
+
     def level1math(self):
         import numbers1
-        numbers1
-        pass
+        numbers1.run_math_game()
 
     def level2math(self):
         import numbers2
-        numbers2
-        pass
+        numbers2.runmath2()
 
     def level3math(self):
         import numbers3
-        numbers3
-        pass
+        numbers3.runmath3()
 
     def level1spelling(self):
         import spelling1
-        spelling1
-        pass
+        spelling1.spellgame1()
 
     def level2spelling(self):
         import spelling2
-        spelling2
-        pass
+        spelling2.spellgame2()
 
     def level3spelling(self):
         import spelling3
-        spelling3
-        pass
+        spelling3.spellgame3()
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = GameApp(root)
-    root.mainloop()
+def login(username):
+    global current_username
+    current_username = username
+    root.destroy()
+    os.system("python main.py")
+
+root = tk.Tk()
+app = GameApp(root)
+root.mainloop()

@@ -7,7 +7,7 @@ class SpellingGame:
     def __init__(self, root):
         self.root = root
         self.root.title("Spelling Game")
-        power = tk.Label(text="Un-Jumble the words.")
+        power = tk.Label(text="Un-sramble the words.")
         power.pack()
         
         self.words = {
@@ -69,9 +69,9 @@ class SpellingGame:
             self.score += 1
         else:
             self.label.config(text="Incorrect.")
-            root.after(2000, lambda: self.next_word())
+            self.root.after(2000, lambda: self.next_word())
 
-
-root = tk.Tk()
-game = SpellingGame(root)
-root.mainloop()
+def spellgame3():
+    root = tk.Tk()
+    game = SpellingGame(root)
+    root.mainloop()
