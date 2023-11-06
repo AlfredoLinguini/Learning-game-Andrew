@@ -77,6 +77,8 @@ class GameApp:
         math_game_root.mainloop()
 
     def level1math(self):
+        self.current_frame = tk.Frame(self.root)
+        self.current_frame.pack()
         import numbers1
         numbers1.run_math_game()
 

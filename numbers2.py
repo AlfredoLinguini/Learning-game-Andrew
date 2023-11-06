@@ -68,6 +68,6 @@ class MathGameApp2:
 
 def runmath2():
     root = tk.Tk()
-    app = MathGameApp(root)
+    app = MathGameApp2(root)
     root.mainloop()
 

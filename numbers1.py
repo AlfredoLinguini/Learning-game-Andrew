@@ -72,14 +72,25 @@ class MathGameApp:
             self.answer_entry.config(state="disabled")
             self.submit_button.config(state="disabled")
 
-        if self.score == 10:
-            self.result_label.config(text="Congratulations!!! You got all 10 questions correct.")
-            image = Image.open("brain-big-brain.gif")
-            photo = ImageTk.PhotoImage(image)
-            label = tk.Label(image=photo)
-            label.pack()
-            self.root.mainloop()
-        
+            if self.score == 10:
+                self.result_label.config(text="Congratulations!!! You got all 10 questions correct.")
+                image = Image.open("brain-big-brain.gif")
+                photo = ImageTk.PhotoImage(image)
+                label = tk.Label(image=photo)
+                label.pack()
+                frameCnt = 54
+                frames = [PhotoImage(file='brain-big-brain.gif', format='gif -index %i' % (i))
+                          for i in range(frameCnt)]
+
+                def update(ind):
+                    frame = frames[ind]
+                    ind += 1
+                    if ind == frameCnt:
+                        ind = 0
+                    label.configure(image=frame)
+                    self.root.after(100, update, ind)
+                self.root.mainloop()
+            
 
     def update_score(self):
         self.root.title(f"Math Game - Score: {self.score}/{self.num_questions}")

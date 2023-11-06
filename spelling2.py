@@ -4,7 +4,7 @@ import string
 import time
 
 
-class SpellingGame:
+class SpellingGame2:
     def __init__(self, root):
         self.root = root
         self.root.title("Spelling Game")
@@ -67,5 +67,5 @@ class SpellingGame:
 
 def spellgame2():
     root = tk.Tk()
-    game = SpellingGame(root)
+    game = SpellingGame2(root)
     root.mainloop()
